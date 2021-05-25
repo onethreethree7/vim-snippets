@@ -75,11 +75,9 @@ snippet \ unnumbered equation: \[ ... \]
 	\\[
 		${0:${VISUAL}}
 	\\]
-# Equation array
-snippet eqnarray eqnarray environment
-	\\begin{eqnarray}
-		${0:${VISUAL}}
-	\\end{eqnarray}
+# Inline
+snippet , 
+	\$${1}\$ ${2}
 # Label
 snippet lab \label
 	\\label{${1:eq:}${2:fig:}${3:tab:}${0}}
@@ -297,6 +295,8 @@ snippet fr \frac{}{}
 	\\frac{${1:num}}{${2:denom}} ${0}
 snippet sum \sum^{}_{}
 	\\sum^{${1:n}}_{${2:i=1}} ${0}
+snippet prod \prod^{}_{}
+	\\prod^{${1:n}}_{${2:i=1}} ${0}
 snippet lim \lim_{}
 	\\lim_{${1:n \\to \\infty}} ${0}
 snippet frame frame environment
@@ -337,9 +337,6 @@ snippet multicol2 two-column environment with multicol
 snippet \{ \{ \}
 	\\{ ${0} \\}
 
-snippet int integral
-	\\int\\limits_{${1}}^{${2}} ${3} \\, d${4}
-
 #delimiter
 snippet lr left right
 	\\left${1} ${0:${VISUAL}} \\right$1
@@ -351,7 +348,7 @@ snippet lr{ left\{ right\}
 	\\left\\{ ${0:${VISUAL}} \\right\\}
 snippet lr[ left[ right]
 	\\left[ ${0:${VISUAL}} \\right]
-snippet lra langle rangle
+snippet lr< langle rangle
 	\\langle ${0:${VISUAL}} \\rangle
 # Code listings
 snippet lst
